@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=CPUtest
+#SBATCH --job-name=GPUtest
 #SBATCH -N 1
 #SBATCH --ntasks=16
 #SBATCH --time=00:30:00
@@ -16,5 +16,5 @@ module load QuantumESPRESSO/DEV-NVHPC-21.2-CPU
 
 export OMP_NUM_THREADS=1
 
-mpirun -np 16 turbo_magnon.x -nk 16 -i turbo_magnon.Fe.tddfpt.in > turbo_magnon.Fe.tddfpt.out
+mpirun -np 16 turbo_eels.x -nk 16 -i turbo_eels.Si.tddfpt.in > turbo_eels.Si.tddfpt.out
 

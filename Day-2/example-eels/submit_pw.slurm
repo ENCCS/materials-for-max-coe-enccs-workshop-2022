@@ -16,5 +16,5 @@ module load QuantumESPRESSO/DEV-NVHPC-21.2-CPU
 
 export OMP_NUM_THREADS=1
 
-mpirun -np 16 turbo_magnon.x -nk 16 -i turbo_magnon.Fe.tddfpt.in > turbo_magnon.Fe.tddfpt.out
+mpirun -mca pml ucx -mca btl ^uct,tcp,openib,vader -np 16 pw.x -nk 16 -i pw.Si.scf.in > pw.Si.scf.out
 

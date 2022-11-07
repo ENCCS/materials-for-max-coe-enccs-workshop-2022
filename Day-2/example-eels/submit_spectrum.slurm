@@ -1,10 +1,10 @@
 #!/bin/bash
-#SBATCH --job-name=CPUtest
+#SBATCH --job-name=GPUtest
 #SBATCH -N 1
-#SBATCH --ntasks=16
+#SBATCH --ntasks=1
 #SBATCH --time=00:30:00
 #SBATCH --partition=cpu
-#SBATCH --ntasks-per-node=16
+#SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=1
 
 module purge
@@ -16,5 +16,6 @@ module load QuantumESPRESSO/DEV-NVHPC-21.2-CPU
 
 export OMP_NUM_THREADS=1
 
-mpirun -np 16 turbo_magnon.x -nk 16 -i turbo_magnon.Fe.tddfpt.in > turbo_magnon.Fe.tddfpt.out
+mpirun -np 1 turbo_spectrum.x -i turbo_spectrum.Fe.pp.in > turbo_spectrum.Fe.pp.out
+
 

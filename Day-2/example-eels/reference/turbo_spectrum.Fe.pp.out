@@ -1,6 +1,6 @@
  Warning: Only a single CPU will be used!
 
-     Program TDDFPT_PP v.7.1 starts on  7Nov2022 at 15:34:56 
+     Program TDDFPT_PP v.7.1 starts on  7Nov2022 at 17:40:51 
         Git branch: develop_bands
         Last git commit: 816aee40db40e6b706df606a62b57acfcd26b4df
         Last git commit date: Fri Oct 21 11:20:44 2022 +0200
@@ -20,25 +20,36 @@
      Threads/MPI process:                     1
 
      MPI processes distributed on     1 nodes
-     176869 MiB available memory on the printing compute node when the environment starts
+     154984 MiB available memory on the printing compute node when the environment starts
  
 
-     Reading   1000 Lanczos steps for direction 1
-       1000 steps will be considered
+     Reading   2000 Lanczos steps
+       2000 steps will be considered
 
+     Lanczos coefficients:
+     Average =    10.06781041
+     Average oscillation amplitude =     0.03256135
 
      Data ready, starting to calculate observables...
 
-     Broadening =      0.50000000 meV
+     Broadening =      0.03500000 Ry
 
-     Output file name: Femag.plot_chi.dat
+     Output file name for the susceptibility: Sieels.plot_chi.dat
 
-     chi_i_j: magnetization-magnetization tensor  in units of mu_B^2 / meV
+     Functions are reported in \hbar.\omega  Energy unit is (eV)
+
+     Output file name for the inverse and direct dielectric function: Sieels.plot_eps.dat
+
+     The f-sum rule is given by Eq.(6) in Comput. Phys. Commun. 196, 460 (2015).
+     Integration in the range from   0.00 to  50.00 eV.
+     The number of valence (and semicore) electrons in the unit cell:   7.11
+     The exact number of electrons:   8.00
+     The violation of the f-sum rule:  11.10 %
  
-     TDDFPT_PP    :      0.13s CPU      0.39s WALL
+     TDDFPT_PP    :      1.98s CPU      2.07s WALL
 
  
-   This run was terminated on:  15:34:56   7Nov2022            
+   This run was terminated on:  17:40:53   7Nov2022            
 
 =------------------------------------------------------------------------------=
    JOB DONE.
