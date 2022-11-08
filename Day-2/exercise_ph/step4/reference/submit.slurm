@@ -9,8 +9,6 @@
 #SBATCH --job-name=phstep4
 #SBATCH --error=err.job-%j
 #SBATCH --output=out.job-%j
-#SBATCH --mail-type=ALL
-#SBATCH --mail-user=l.bellentani@cineca.it
 #SBATCH --hint=nomultithread
 
 export WORK=/ceph/hpc/data/d2021-135-users
@@ -26,4 +24,4 @@ export INDIR=${EXDIR}/inputs
 
 mpiopt="-mca pml ucx -mca btl ^uct,tcp,openib,vader --map-by socket:PE=32 --rank-by core --report-bindings "
 
-mpirun $mpiopt -np 2 ph.x -ni 1 -nk 2 -i $INDIR/ph.CnSnI3.in > ph.CnSnI3.out
+mpirun $mpiopt -np 2 ph.x -ni 1 -nk X -i ph.CnSnI3.in > ph.CnSnI3.out
