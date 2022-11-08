@@ -1,12 +1,10 @@
  &control
     calculation='scf'
     restart_mode='from_scratch',
-    title = 'TDDFPT-MAGNONS Example fE (NC PP)'
     outdir='./tempdir',
     prefix='Femag'
     pseudo_dir="../../pseudo"
     verbosity='high'
-    wf_collect = .true.
  /
  &system
     nosym           = .true.
