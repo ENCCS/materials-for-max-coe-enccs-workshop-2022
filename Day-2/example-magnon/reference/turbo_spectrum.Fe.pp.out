@@ -1,0 +1,45 @@
+ Warning: Only a single CPU will be used!
+
+     Program TDDFPT_PP v.7.1 starts on  7Nov2022 at 15:34:56 
+        Git branch: develop_bands
+        Last git commit: 816aee40db40e6b706df606a62b57acfcd26b4df
+        Last git commit date: Fri Oct 21 11:20:44 2022 +0200
+        Last git commit subject: improvement for magnons
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI & OpenMP), running on       1 processor cores
+     Number of MPI processes:                 1
+     Threads/MPI process:                     1
+
+     MPI processes distributed on     1 nodes
+     176869 MiB available memory on the printing compute node when the environment starts
+ 
+
+     Reading   1000 Lanczos steps for direction 1
+       1000 steps will be considered
+
+
+     Data ready, starting to calculate observables...
+
+     Broadening =      0.50000000 meV
+
+     Output file name: Femag.plot_chi.dat
+
+     chi_i_j: magnetization-magnetization tensor  in units of mu_B^2 / meV
+ 
+     TDDFPT_PP    :      0.13s CPU      0.39s WALL
+
+ 
+   This run was terminated on:  15:34:56   7Nov2022            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
