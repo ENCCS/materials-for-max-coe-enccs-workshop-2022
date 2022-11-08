@@ -28,4 +28,4 @@ export INDIR=${EXDIR}/inputs
 
 mpiopt="-mca pml ucx -mca btl ^uct,tcp,openib,vader  --map-by socket:PE=32 --rank-by core --report-bindings "
 
-mpirun $mpiopt -np 4 pw.x -ni 1 -nk 1 -i $INDIR/pw.CnSnI3.in > pw.CnSnI3.out
+mpirun $mpiopt -np 4 pw.x -ni 1 -nk 1 -i pw.CnSnI3.in > pw.CnSnI3.out
