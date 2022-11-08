@@ -17,3 +17,6 @@ Perform a phonon calculation at Gamma on 2 GPUs for CnSnI3 using the ph.x progra
 
 	sbatch submit.slurm
 
+5. Check wall time for parallel execution
+
+	tail ph.CnSnI3.out

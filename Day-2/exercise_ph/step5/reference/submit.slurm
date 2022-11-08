@@ -10,8 +10,6 @@
 #SBATCH --error=err.job-%j
 #SBATCH --output=out.job-%j
 #SBATCH --hint=nomultithread
-#SBATCH --mail-type=ALL
-#SBATCH --mail-user=l.bellentani@cineca.it
 
 export WORK=/ceph/hpc/data/d2021-135-users
 export EXDIR=${PWD}/..
@@ -26,5 +24,5 @@ export INDIR=${EXDIR}/inputs
 
 mpiopt="-mca pml ucx -mca btl ^uct,tcp,openib,vader --map-by socket:PE=32 --rank-by core --report-bindings "
 
-mpirun $mpiopt -np 4 ph.x -ni 4 -nk 1 -i $INDIR/ph.CnSnI3.in > ph.CnSnI3.out
-mpirun $mpiopt -np 1 ph.x -ni 1 -nk 1 -i $INDIR/ph.CnSnI3.recover.in > ph.CnSnI3.recover.out
+mpirun $mpiopt -np 4 ph.x -ni 4 -nk 1 -i ph.CnSnI3.in > out.0_0
+mpirun $mpiopt -np 1 ph.x -ni 1 -nk 1 -i ph.CnSnI3.recover.in > ph.CnSnI3.recover.out
