@@ -10,7 +10,7 @@ Apply the Acoustic Sum Rule (ASR) with dynmat.x
 	&input
 		asr=''
 
-2. Copy ../inputs/out in the current folder
+2. Copy ../inputs/harmdyn_support in the current folder
 
 3. Submit the job 
 

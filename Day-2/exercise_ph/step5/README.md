@@ -5,7 +5,8 @@ DAY-2, EXERCISE - PHONON MODES OF CnSnI3 AT GAMMA
  
 Perform a phonon calculation at Gamma on 4 GPUs for CnSnI3 using the ph.x program.
 
-1. Copy the inputs of step2 ../step2/ph.CnSnI3.in and ../step2/ph.CnSnI3.recover.in in the current folder
+1. Copy the input of step2 ../step2/ph.CnSnI3.in, copy ph.CnSnI3.in as ph.CnSnI3.recover.in
+   Add recover=.true. in &inputph of the latter file
 
 2. Copy the ../step1/out directory in the current folder
 

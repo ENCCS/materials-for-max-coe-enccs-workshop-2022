@@ -10,8 +10,6 @@
 #SBATCH --error=err.job-%j
 #SBATCH --output=out.job-%j
 #SBATCH --hint=nomultithread
-#SBATCH --mail-type=ALL
-#SBATCH --mail-user=l.bellentani@cineca.it
 
 export WORK=/ceph/hpc/data/d2021-135-users
 export EXDIR=${PWD}/..

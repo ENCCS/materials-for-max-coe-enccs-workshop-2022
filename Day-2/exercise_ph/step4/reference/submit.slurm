@@ -20,7 +20,6 @@ module load QuantumESPRESSO/DEV-NVHPC-21.2-FIXMAG
 
 export ESPRESSO_PSEUDO=${EXDIR}/pseudo
 export OMP_NUM_THREADS=1
-export INDIR=${EXDIR}/inputs
 
 mpiopt="-mca pml ucx -mca btl ^uct,tcp,openib,vader --map-by socket:PE=32 --rank-by core --report-bindings "
 
