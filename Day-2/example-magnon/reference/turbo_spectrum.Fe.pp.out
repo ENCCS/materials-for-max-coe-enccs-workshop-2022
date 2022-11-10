@@ -1,10 +1,6 @@
  Warning: Only a single CPU will be used!
 
-     Program TDDFPT_PP v.7.1 starts on  7Nov2022 at 15:34:56 
-        Git branch: develop_bands
-        Last git commit: 816aee40db40e6b706df606a62b57acfcd26b4df
-        Last git commit date: Fri Oct 21 11:20:44 2022 +0200
-        Last git commit subject: improvement for magnons
+     Program TDDFPT_PP v.7.1 starts on 10Nov2022 at 14:53:17 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -20,25 +16,42 @@
      Threads/MPI process:                     1
 
      MPI processes distributed on     1 nodes
-     176869 MiB available memory on the printing compute node when the environment starts
- 
+     177269 MiB available memory on the printing compute node when the environment starts
 
-     Reading   1000 Lanczos steps for direction 1
-       1000 steps will be considered
 
+     Reading   5000 Lanczos steps for direction 1
+       5000 steps will be considered
+
+
+     Polarization direction:1
+     Lanczos coefficients:
+     Average =    20.13903404
+     Average oscillation amplitude =     0.00368158
+     Average alpha =    -0.00048503    -0.00000000
+     Average alpha oscillation amplitude =    -0.00014046    -0.00000000
+     Average gamma =    20.13903404    -0.00000000
+     Average gamma oscillation amplitude =     0.00368158     0.00000000
+     Extrapolation =                      osc
+      ip =   1
+     Average beta =    20.13903404
+     Average beta oscillation amplitude =     0.00368158
+     Average alpha =     0.00000000     0.00000000
+     Average alpha oscillation amplitude =     0.00000000     0.00000000
+     Average gamma =    20.13903404     0.00000000
+     Average gamma oscillation amplitude =     0.00368158     0.00000000
 
      Data ready, starting to calculate observables...
 
      Broadening =      0.50000000 meV
 
-     Output file name: Femag.plot_chi.dat
+     Output file name: Femag.plot_chi.dat  
 
      chi_i_j: magnetization-magnetization tensor  in units of mu_B^2 / meV
- 
-     TDDFPT_PP    :      0.13s CPU      0.39s WALL
 
- 
-   This run was terminated on:  15:34:56   7Nov2022            
+     TDDFPT_PP    :      0.31s CPU      0.67s WALL
+
+
+   This run was terminated on:  14:53:17  10Nov2022            
 
 =------------------------------------------------------------------------------=
    JOB DONE.

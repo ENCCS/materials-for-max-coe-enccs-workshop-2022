@@ -8,10 +8,11 @@
 #SBATCH --cpus-per-task=1
 
 module purge
-module use /ceph/hpc/data/d2021-135-users/modules
+module load QuantumESPRESSO/7.1-foss-2022a
+##module use /ceph/hpc/data/d2021-135-users/modules
 ##module load QuantumESPRESSO/DEV-NVHPC-21.2
 ##module load QuantumESPRESSO/DEV-NVHPC-21.2-MKL-2-SCALAPACK-FIXMAG
-module load QuantumESPRESSO/DEV-NVHPC-21.2-CPU
+##module load QuantumESPRESSO/DEV-NVHPC-21.2-CPU
 
 
 export OMP_NUM_THREADS=1
