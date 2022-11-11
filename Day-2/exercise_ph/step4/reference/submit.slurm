@@ -10,17 +10,17 @@
 #SBATCH --error=err.job-%j
 #SBATCH --output=out.job-%j
 #SBATCH --hint=nomultithread
+#SBATCH --reservation=
 
 export WORK=/ceph/hpc/data/d2021-135-users
-export EXDIR=${PWD}/..
 
 module purge
 module use ${WORK}/modules
-module load QuantumESPRESSO/DEV-NVHPC-21.2-FIXMAG
+module load QuantumESPRESSO/DEV-NVHPC-21.2
 
-export ESPRESSO_PSEUDO=${EXDIR}/pseudo
+export ESPRESSO_PSEUDO=${PWD}/../../../pseudo
 export OMP_NUM_THREADS=1
 
 mpiopt="-mca pml ucx -mca btl ^uct,tcp,openib,vader --map-by socket:PE=32 --rank-by core --report-bindings "
 
-mpirun $mpiopt -np 2 ph.x -ni 1 -nk X -i ph.CnSnI3.in > ph.CnSnI3.out
+mpirun $mpiopt -np 2 ph.x -ni 1 -nk 2 -i ph.CnSnI3.in > ph.CnSnI3.out
