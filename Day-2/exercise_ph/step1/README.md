@@ -1,6 +1,6 @@
-# DAY-2, EXERCISE - PHONON MODES OF CnSnI3 AT GAMMA 
+# DAY-2, EXERCISE - Phonon modes of CnSnI3 at Gamma
 
-## PWSCF SIMULATION, STEP 1 #
+## pwscf simulation, step 1 #
  
 Perform a vc-relax calculation for CnSnI3  using the pw.x program.
 
