@@ -18,6 +18,8 @@ module load QuantumESPRESSO/7.1-foss-2022a
 
 export INDIR=${EXDIR}/inputs
 export ESPRESSO_PSEUDO=${EXDIR}/../pseudo
-export OMP_NUM_THREADS=1
 
+# number of threads (serial)
+export OMP_NUM_THREADS=...
+# execute PW
 mpirun ...
