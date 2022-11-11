@@ -7,6 +7,7 @@
 #SBATCH --ntasks-per-node=64
 #SBATCH --cpus-per-task=1
 #SBATCH --exclusive
+#SBATCH --reservation=maxcpu
 
 module purge
 module load QuantumESPRESSO/7.1-foss-2022a
