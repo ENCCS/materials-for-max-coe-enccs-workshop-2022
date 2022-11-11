@@ -3,12 +3,12 @@
    outdir = './tempdir',
    magnons = .true.,
    units = 3,
-   itermax0 = 1000,
-   itermax = 1000,
-   extrapolation='no',
+   itermax0 = 5000,
+   itermax = 15000,
+   extrapolation='osc',
    epsil = 0.5,
    ipol = 2,
-   start = 400.0d0,
+   start = 0.0d0,
    increment = 0.1d0,
-   end = 500.0d0
+   end = 28.0d0
  /

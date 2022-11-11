@@ -1,20 +1,16 @@
 #!/bin/bash
-#SBATCH --job-name=CPUtest
+#SBATCH --job-name=magnonFe
 #SBATCH -N 1
-#SBATCH --ntasks=16
+#SBATCH --ntasks=64
 #SBATCH --time=00:30:00
 #SBATCH --partition=cpu
-#SBATCH --ntasks-per-node=16
+#SBATCH --ntasks-per-node=64
 #SBATCH --cpus-per-task=1
 
 module purge
-module use /ceph/hpc/data/d2021-135-users/modules
-##module load QuantumESPRESSO/DEV-NVHPC-21.2
-##module load QuantumESPRESSO/DEV-NVHPC-21.2-MKL-2-SCALAPACK-FIXMAG
-module load QuantumESPRESSO/DEV-NVHPC-21.2-CPU
-
+module load QuantumESPRESSO/7.1-foss-2022a
 
 export OMP_NUM_THREADS=1
 
-mpirun -np 16 turbo_magnon.x -nk 16 -i turbo_magnon.Fe.tddfpt.in > turbo_magnon.Fe.tddfpt.out
+mpirun -np 64 turbo_magnon.x -nk 16 -i turbo_magnon.Fe.tddfpt.in > turbo_magnon.Fe.tddfpt.out
 
