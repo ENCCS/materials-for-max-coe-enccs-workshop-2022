@@ -3,11 +3,11 @@
 #SBATCH --nodes 1
 #SBATCH --time=00:00:30
 #SBATCH --partition=cpu
-#SBATCH --ntasks-per-socket=1
-#SBATCH --ntasks-per-node=1
+#SBATCH --reservation=maxcpu
+#SBATCH --ntasks-per-socket=...
+#SBATCH --ntasks-per-node=...
 #SBATCH --hint=nomultithread
-#SBATCH --cpus-per-task=1
-#SBATCH --cpus-per-task=1
+#SBATCH --cpus-per-task=...
 #SBATCH --output=sysout.out
 #SBATCH --error=syserr.err
 

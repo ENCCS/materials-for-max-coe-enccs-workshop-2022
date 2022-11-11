@@ -4,10 +4,10 @@
 #SBATCH --time=00:10:00
 #SBATCH --partition=gpu
 #SBATCH --reservation=maxgpu
-#SBATCH --ntasks-per-node=...
+#SBATCH --ntasks-per-node=4
 #SBATCH --ntasks-per-socket=2
-#SBATCH --cpus-per-task=...
-#SBATCH --gres=gpu:...
+#SBATCH --cpus-per-task=32
+#SBATCH --gres=gpu:4
 #SBATCH --hint=nomultithread
 #SBATCH --output=sysout.out
 #SBATCH --error=syserr.err
@@ -22,8 +22,8 @@ module load QuantumESPRESSO/DEV-NVHPC-21.2
 export EXDIR=${PWD}/..
 export INDIR=${EXDIR}/inputs
 export ESPRESSO_PSEUDO=${EXDIR}/../pseudo
-export OMP_NUM_THREADS=...
+export OMP_NUM_THREADS=1
 
-mpiopt="-mca pml ucx -mca btl ^uct,tcp,openib,vader  --map-by socket:PE=... --rank-by core --report-bindings "
+mpiopt="-mca pml ucx -mca btl ^uct,tcp,openib,vader  --map-by socket:PE=32 --rank-by core --report-bindings "
 
-mpirun $mpiopt -np ... pw.x -i ${INDIR}/pw.CnSnI3.in > pw.CnSnI3.gpu.out
+mpirun $mpiopt -np 4 pw.x -i ${INDIR}/pw.CnSnI3.in > pw.CnSnI3.gpu.out

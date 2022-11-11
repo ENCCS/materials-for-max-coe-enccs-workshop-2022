@@ -4,6 +4,7 @@
 #SBATCH --exclusive
 #SBATCH --time=00:20:00
 #SBATCH --partition=cpu
+#SBATCH --reservation=maxcpu
 #SBATCH --ntasks-per-socket=2
 #SBATCH --ntasks-per-node=16
 #SBATCH --hint=nomultithread
