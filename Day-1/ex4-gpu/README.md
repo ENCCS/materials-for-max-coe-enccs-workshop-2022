@@ -11,5 +11,5 @@ Test the power of the GPUs (roughly).
 
 2. Enable openMP threading. Do you see any improvement?
    
-3. Consider you best CPU run. How many GPUs were necessary to match the performance?  
+3. Consider your best CPU run. How many GPUs were necessary to match the performance?  
    If you don't have your optimized CPU batch file from exercise 3 you can use the one in the reference folder.

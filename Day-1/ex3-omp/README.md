@@ -1,7 +1,7 @@
 EXERCISE 3 - MPI + OpenMP parallelization
 ===============================================
 
-Find out how to best exploit the available CPU resources, by playing with the MPI-related parameters (number of tasks, npools) toghether with the number of threads.  
+Find out how to best exploit the available CPU resources, by playing with the MPI-related parameters (number of tasks, npools) together with the number of threads.  
 Use the batch file 'ex3-omp.slurm' to submit your jobs (modify it at your convenience).  
 Hints:
 
