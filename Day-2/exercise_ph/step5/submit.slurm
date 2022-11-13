@@ -20,7 +20,7 @@ module load QuantumESPRESSO/DEV-NVHPC-21.2
 export ESPRESSO_PSEUDO=${PWD}/../../../pseudo
 export OMP_NUM_THREADS=1
 
-mpiopt="-mca pml ucx -mca btl ^uct,tcp,openib,vader --map-by socket:PE=32 --rank-by core --report-bindings "
+mpiopt="-mca pml ucx -mca btl ^uct,tcp,openib,vader --map-by socket:PE=32 --rank-by core "
 
 mpirun $mpiopt -np 4 ph.x -ni X -nk 1 -i ph.CnSnI3.in > out.0_0
 mpirun $mpiopt -np 1 ph.x -ni 1 -nk 1 -i ph.CnSnI3.recover.in > ph.CnSnI3.recover.out
