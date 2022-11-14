@@ -16,7 +16,6 @@ export WORK=/ceph/hpc/data/d2021-135-users
 module purge
 module use ${WORK}/modules
 
-echo $WORK
 module load QuantumESPRESSO/DEV-NVHPC-21.2
 
 export ESPRESSO_PSEUDO=${PWD}/../../../pseudo

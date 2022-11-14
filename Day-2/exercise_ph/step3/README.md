@@ -11,10 +11,10 @@ Apply the Acoustic Sum Rule (ASR) with `dynmat.x`
 		asr=''
 	```
 
-2. Copy `../inputs/harmdyn_support` in the current folder
+2. Copy `../step2/harmdyn_support` in the current folder
 
 3. Submit the job 
 
-4. Check phonon modes with ASR rule applied in `dynmat.CnSnI3.out`
+4. Check phonon frequencies with ASR rule applied in `dynmat.CnSnI3.out`
 
 

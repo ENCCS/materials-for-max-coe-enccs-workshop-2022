@@ -4,27 +4,22 @@
  
 Perform a phonon calculation at Gamma on 4 GPUs for CnSnI3 using the `ph.x` program.
 
-1. Copy the input of step2 `../step2/ph.CnSnI3.in`, `copy ph.CnSnI3.in` as `ph.CnSnI3.recover.in`
-   Add `recover=.true.` in `&inputph` of the latter file
+1. Copy the input of step2 `../step2/ph.CnSnI3.in`
 
-2. Copy the `../step1/out` directory in the current folder
+2. Copy `ph.CnSnI3.in` as `ph.CnSnI3.recover.in` and add `recover=.true.` in `&inputph`
 
-3. Modify X in submit.slurm to distribute the calculation on 4 MPIs : GPUs with image parallelization
+3. Copy the `../step1/out` directory in the current folder
 
-	`mpirun $mpiopt -np 4 ph.x -ni X -nk 1 -i ph.CnSnI3.in > ph.CnSnI3.out`
+4. Modify nimages in submit.slurm to distribute the calculation on 4 MPIs : GPUs with image parallelization
  
-4. Submit the jobfile
+5. Submit the jobfile
 
 	`sbatch submit.slurm`
 
-5. With image parallelism there is 1 output file for each image. These are named `out.X_0`, with X the image rank. 
-   Check how many irreducible representations (n_X) each image takes care
+6. With image parallelism there is 1 output file for each image. These are named `out.*_0`, with * the image rank. 
+   Check the workload of each image
 
-        `awk '/I am image/' out.*`
+        `awk '/I am image/ {x=NR+3} (NR<=x) {print $0} ' out.*_0`
 
-6. Compare wall times. Which image takes longer ? Why ?
-
-NB: Each image computes the dynamical matrices for the corresponding number of irreducible representations (n_X).
-    These are stored in `./out/_phX/dynmat.X.Y`, with X the image rank and Y the q-point index (0 in this exercise)
-    A recover run is needed to collect the local files and compute the phonon modes (see `ph.CnSnI3.recover.out` )
+6. Compare wall times. Which images takes the longest time ? Why ?
 

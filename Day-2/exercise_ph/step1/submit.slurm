@@ -10,18 +10,18 @@
 #SBATCH --error=err.job-%j
 #SBATCH --output=out.job-%j
 #SBATCH --hint=nomultithread
+#SBATCH --reservation=maxgpu
 
 export WORK=/ceph/hpc/data/d2021-135-users
 
 module purge
 module use ${WORK}/modules
 
-echo $WORK
 module load QuantumESPRESSO/DEV-NVHPC-21.2
 
 export ESPRESSO_PSEUDO=${PWD}/../../../pseudo
 export OMP_NUM_THREADS=1
 
-mpiopt="-mca pml ucx -mca btl ^uct,tcp,openib,vader  --map-by socket:PE=32 --rank-by core --report-bindings "
+mpiopt="-mca pml ucx -mca btl ^uct,tcp,openib,vader  --map-by socket:PE=32 --rank-by core"
 
-mpirun $mpiopt -np X pw.x -ni 1 -nk 1 -i pw.CnSnI3.in > pw.CnSnI3.out
+mpirun $mpiopt -np npw pw.x -ni 1 -nk 1 -i pw.CnSnI3.in > pw.CnSnI3.out
