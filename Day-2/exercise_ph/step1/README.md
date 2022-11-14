@@ -8,10 +8,8 @@ Perform a vc-relax calculation for CnSnI3  using the pw.x program.
 
    `calculation=""`
 
-2. Open `submit.slurm` and modify X to use R&G on 4 MPIs:GPUs
+2. Open `submit.slurm` and modify npw to use R&G on 4 MPIs:GPUs
 	
-   `mpirun -np X pw.x -i pw.in > pw.out`
-
 3. Submit the job file
 
    `sbatch submit.slurm`

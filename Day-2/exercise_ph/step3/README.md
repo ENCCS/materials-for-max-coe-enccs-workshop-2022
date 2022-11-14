@@ -15,6 +15,6 @@ Apply the Acoustic Sum Rule (ASR) with `dynmat.x`
 
 3. Submit the job 
 
-4. Check phonon frequencies with ASR rule applied in `dynmat.CnSnI3.out`
+4. Check phonon frequencies with ASR rule applied in `dyn.CnSnI3.out`
 
 

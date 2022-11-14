@@ -8,10 +8,8 @@ Perform a phonon calculation at Gamma on 2 GPUs for CnSnI3 using the `ph.x` prog
 
 2. Copy the `../step1/out` directory in the current folder
 
-3. Modify X in submit.slurm to distribute the calculation on 2 MPIs : GPUs with pool parallelization
+3. Modify npools in submit.slurm to distribute the calculation on 2 MPIs : GPUs with pool parallelization
 
-	`mpirun $mpiopt -np 2 ph.x -ni 1 -nk X -i ph.CnSnI3.in > ph.CnSnI3.out`
- 
 4. Submit the jobfile
 
 	`sbatch submit.slurm`
